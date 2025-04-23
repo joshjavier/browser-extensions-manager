@@ -1,4 +1,4 @@
-import { createTheme, rem } from '@mantine/core';
+import { Button, createTheme, rem } from '@mantine/core';
 
 export const theme = createTheme({
   /** Put your mantine theme override here */
@@ -69,5 +69,12 @@ export const theme = createTheme({
     '20': rem(20),
     '24': rem(24),
     full: '999rem',
+  },
+  components: {
+    Button: Button.extend({
+      defaultProps: {
+        radius: 'full',
+      },
+    }),
   },
 });

@@ -35,4 +35,8 @@ export const theme = createTheme({
     light: 7,
     dark: 4,
   },
+  fontFamily: "'Noto Sans', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
+  fontSizes: {
+    xxl: rem(34),
+  },
 });

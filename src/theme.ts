@@ -1,4 +1,4 @@
-import { createTheme } from '@mantine/core';
+import { createTheme, rem } from '@mantine/core';
 
 export const theme = createTheme({
   /** Put your mantine theme override here */
@@ -30,6 +30,8 @@ export const theme = createTheme({
       '#c92a2a',
     ],
   },
+  white: 'var(--mantine-color-neutral-0)',
+  black: 'var(--mantine-color-neutral-9)',
   primaryColor: 'red',
   primaryShade: {
     light: 7,
@@ -38,5 +40,34 @@ export const theme = createTheme({
   fontFamily: "'Noto Sans', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
   fontSizes: {
     xxl: rem(34),
+  },
+  spacing: {
+    '0': '0',
+    '025': rem(2),
+    '050': rem(4),
+    '075': rem(6),
+    '100': rem(8),
+    '125': rem(10),
+    '150': rem(12),
+    '200': rem(16),
+    '250': rem(20),
+    '300': rem(24),
+    '400': rem(32),
+    '500': rem(40),
+    '600': rem(48),
+    '800': rem(64),
+    '1000': rem(80),
+  },
+  radius: {
+    '0': '0',
+    '4': rem(4),
+    '6': rem(6),
+    '8': rem(8),
+    '10': rem(10),
+    '12': rem(12),
+    '16': rem(16),
+    '20': rem(20),
+    '24': rem(24),
+    full: '999rem',
   },
 });

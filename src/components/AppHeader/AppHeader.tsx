@@ -1,6 +1,6 @@
 import { Container } from '@mantine/core';
 
-export function SiteHeader() {
+export function AppHeader() {
   return (
     <Container>
       <div>Logo Container</div>

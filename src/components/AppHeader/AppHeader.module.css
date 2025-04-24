@@ -1,0 +1,28 @@
+.container {
+  box-sizing: content-box;
+  padding-top: var(--mantine-spacing-250);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    padding-inline: var(--mantine-spacing-400);
+    padding-top: var(--mantine-spacing-300);
+  }
+
+  @media (min-width: $mantine-breakpoint-lg) {
+    padding-top: var(--mantine-spacing-500);
+  }
+}
+
+.box {
+  padding: var(--mantine-spacing-100) var(--mantine-spacing-150);
+  height: rem(66px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: var(--mantine-spacing-125);
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    padding: var(--mantine-spacing-150) var(--mantine-spacing-200);
+    height: rem(74px);
+    border-radius: var(--mantine-spacing-250);
+  }
+}

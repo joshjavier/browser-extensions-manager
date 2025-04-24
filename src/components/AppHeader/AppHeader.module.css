@@ -1,6 +1,7 @@
 .container {
   box-sizing: content-box;
   padding-top: var(--mantine-spacing-250);
+  padding-bottom: var(--mantine-spacing-500);
 
   @media (min-width: $mantine-breakpoint-sm) {
     padding-inline: var(--mantine-spacing-400);
@@ -9,6 +10,7 @@
 
   @media (min-width: $mantine-breakpoint-lg) {
     padding-top: var(--mantine-spacing-500);
+    padding-bottom: var(--mantine-spacing-800);
   }
 }
 
@@ -19,6 +21,15 @@
   justify-content: space-between;
   align-items: center;
   border-radius: var(--mantine-spacing-125);
+
+  @mixin light {
+    box-shadow: 0 2px 3px 0 #d9e5f4;
+  }
+
+  @mixin dark {
+    background-color: var(--mantine-color-neutral-8);
+    border-color: transparent;
+  }
 
   @media (min-width: $mantine-breakpoint-sm) {
     padding: var(--mantine-spacing-150) var(--mantine-spacing-200);

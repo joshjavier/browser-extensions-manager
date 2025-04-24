@@ -1,4 +1,4 @@
-import { Button, createTheme, rem } from '@mantine/core';
+import { Button, createTheme, CSSVariablesResolver, rem } from '@mantine/core';
 
 export const theme = createTheme({
   /** Put your mantine theme override here */
@@ -76,5 +76,19 @@ export const theme = createTheme({
         radius: 'full',
       },
     }),
+  },
+  other: {
+    lightGradient: 'linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%)',
+    darkGradient: 'linear-gradient(180deg, #04091B 0%, #091540 100%)',
+  },
+});
+
+export const resolver: CSSVariablesResolver = (theme) => ({
+  variables: {},
+  light: {
+    '--mantine-color-gradient': theme.other.lightGradient,
+  },
+  dark: {
+    '--mantine-color-gradient': theme.other.darkGradient,
   },
 });

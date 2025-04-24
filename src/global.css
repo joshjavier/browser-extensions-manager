@@ -26,5 +26,6 @@
 }
 
 body {
-  background-color: var(--mantine-color-background);
+  background: var(--mantine-color-gradient);
+  min-height: 100vh;
 }

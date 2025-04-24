@@ -86,9 +86,9 @@ export const theme = createTheme({
 export const resolver: CSSVariablesResolver = (theme) => ({
   variables: {},
   light: {
-    '--mantine-color-background': theme.other.lightGradient,
+    '--mantine-color-gradient': theme.other.lightGradient,
   },
   dark: {
-    '--mantine-color-background': theme.other.darkGradient,
+    '--mantine-color-gradient': theme.other.darkGradient,
   },
 });

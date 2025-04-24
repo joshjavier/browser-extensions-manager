@@ -1,10 +1,10 @@
-import { ActionIcon, Group } from '@mantine/core';
+import { Group } from '@mantine/core';
+import { ColorSchemeToggle } from '../ColorSchemeToggle';
 
 export function SettingsContainer() {
   return (
     <Group>
-      <ActionIcon variant="light" />
-      <ActionIcon />
+      <ColorSchemeToggle />
     </Group>
   );
 }

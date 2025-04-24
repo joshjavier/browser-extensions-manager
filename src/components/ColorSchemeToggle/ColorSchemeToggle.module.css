@@ -1,0 +1,19 @@
+.button {
+  background-color: var(--mantine-color-neutral-1);
+
+  @mixin dark {
+    background-color: var(--mantine-color-neutral-7);
+  }
+
+  &:hover {
+    background-color: var(--mantine-color-neutral-3);
+
+    @mixin dark {
+      background-color: var(--mantine-color-neutral-6);
+    }
+  }
+
+  &:focus-visible {
+    outline-color: var(--mantine-color-red-4);
+  }
+}

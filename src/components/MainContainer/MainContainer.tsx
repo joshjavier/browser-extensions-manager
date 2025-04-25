@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Flex, Tabs, Title } from '@mantine/core';
+import sampleExtensions from '@/data.json';
 import { ExtensionCard } from '../ExtensionCard';
 import { FilterContainer } from '../Filter';
 import classes from './MainContainer.module.css';
@@ -26,15 +27,24 @@ export function MainContainer() {
         </Flex>
 
         <Tabs.Panel value="all">
-          <ExtensionCard
-            name="DevLens"
-            description="Quickly inspect page layouts and visualize element boundaries."
-            isActive
-            logo="/images/logo-devlens.svg"
-          />
+          {sampleExtensions.map((e) => (
+            <ExtensionCard {...e} />
+          ))}
         </Tabs.Panel>
-        <Tabs.Panel value="active">Active Extensions</Tabs.Panel>
-        <Tabs.Panel value="inactive">Inactive Extensions</Tabs.Panel>
+        <Tabs.Panel value="active">
+          {sampleExtensions
+            .filter((e) => e.isActive)
+            .map((e) => (
+              <ExtensionCard {...e} />
+            ))}
+        </Tabs.Panel>
+        <Tabs.Panel value="inactive">
+          {sampleExtensions
+            .filter((e) => !e.isActive)
+            .map((e) => (
+              <ExtensionCard {...e} />
+            ))}
+        </Tabs.Panel>
       </Tabs>
     </Container>
   );

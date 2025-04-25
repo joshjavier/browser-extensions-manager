@@ -32,4 +32,5 @@
 body {
   background: var(--mantine-color-gradient);
   min-height: 100vh;
+  padding-bottom: var(--mantine-spacing-800);
 }

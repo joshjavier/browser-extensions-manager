@@ -27,7 +27,7 @@ export function ExtensionCard({ logo, name, description, isActive }: ExtensionCa
 
       <Flex className={classes.actions}>
         <Button variant="default">Remove</Button>
-        {isActive && <ActiveSwitch active={isActive} />}
+        {isActive != null && <ActiveSwitch active={isActive} />}
       </Flex>
     </Paper>
   );

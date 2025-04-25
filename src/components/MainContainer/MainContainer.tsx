@@ -21,7 +21,12 @@ export function MainContainer() {
         </Flex>
 
         <Tabs.Panel value="all">
-          <ExtensionCard />
+          <ExtensionCard
+            name="DevLens"
+            description="Quickly inspect page layouts and visualize element boundaries."
+            isActive
+            logo="/images/logo-devlens.svg"
+          />
         </Tabs.Panel>
         <Tabs.Panel value="active">Active Extensions</Tabs.Panel>
         <Tabs.Panel value="inactive">Inactive Extensions</Tabs.Panel>

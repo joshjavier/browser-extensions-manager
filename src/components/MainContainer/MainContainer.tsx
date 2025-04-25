@@ -13,7 +13,12 @@ export function MainContainer() {
         value={activeTab}
         onChange={setActiveTab}
         variant="pills"
-        classNames={{ list: classes.list, tab: classes.tab, tabLabel: classes.tabLabel }}
+        classNames={{
+          list: classes.list,
+          tab: classes.tab,
+          tabLabel: classes.tabLabel,
+          panel: classes.panel,
+        }}
       >
         <Flex justify="space-between" align="center" className={classes.header}>
           <Title className={classes.title}>Extensions List</Title>

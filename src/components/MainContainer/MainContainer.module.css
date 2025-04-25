@@ -72,3 +72,12 @@
 .tabLabel {
   text-transform: capitalize;
 }
+
+.panel {
+  display: grid;
+  gap: var(--mantine-spacing-150);
+
+  @media (min-width: $mantine-breakpoint-xs) {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}

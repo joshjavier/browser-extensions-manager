@@ -1,0 +1,29 @@
+.root {
+  --switch-width: rem(36px);
+  --switch-thumb-size: rem(16px);
+}
+
+.track {
+  border: none;
+
+  input:not(:checked) + & {
+    background-color: var(--mantine-color-neutral-3);
+
+    @mixin dark {
+      background-color: var(--mantine-color-neutral-6);
+    }
+  }
+
+  input:checked + & {
+    @mixin hover {
+      background-color: var(--mantine-color-red-5);
+    }
+  }
+}
+
+.thumb {
+  border: none;
+  box-shadow:
+    0 1px 3px 0 light-dark(alpha(#0a0d12, 0.15), alpha(#0a0d12, 0.1)),
+    0 1px 2px -1px light-dark(alpha(#0a0d12, 0.15), alpha(#091540, 0.6));
+}

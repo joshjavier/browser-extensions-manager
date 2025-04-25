@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { Container, Flex, Tabs, Title } from '@mantine/core';
+import { ExtensionCard } from '../ExtensionCard';
 import { FilterContainer } from '../Filter';
 import classes from './MainContainer.module.css';
 
@@ -19,7 +20,9 @@ export function MainContainer() {
           <FilterContainer />
         </Flex>
 
-        <Tabs.Panel value="all">All Extensions</Tabs.Panel>
+        <Tabs.Panel value="all">
+          <ExtensionCard />
+        </Tabs.Panel>
         <Tabs.Panel value="active">Active Extensions</Tabs.Panel>
         <Tabs.Panel value="inactive">Inactive Extensions</Tabs.Panel>
       </Tabs>

@@ -1,9 +1,14 @@
 .header {
   column-gap: var(--mantine-spacing-600);
   row-gap: var(--mantine-spacing-300);
+  margin-bottom: var(--mantine-spacing-500);
 
   @media (max-width: em(620px)) {
     flex-direction: column;
+  }
+
+  @media (min-width: $mantine-breakpoint-sm) {
+    margin-bottom: var(--mantine-spacing-400);
   }
 }
 

@@ -1,4 +1,5 @@
-import { Button, createTheme, CSSVariablesResolver, rem } from '@mantine/core';
+import { Button, Container, createTheme, CSSVariablesResolver, rem } from '@mantine/core';
+import classes from './theme.module.css';
 
 export const theme = createTheme({
   /** Put your mantine theme override here */
@@ -37,6 +38,7 @@ export const theme = createTheme({
     light: 7,
     dark: 4,
   },
+  focusClassName: classes['focus-auto'],
   fontFamily: "'Noto Sans', system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji'",
   fontSizes: {
     xxl: rem(34),
@@ -71,11 +73,8 @@ export const theme = createTheme({
     full: '999rem',
   },
   components: {
-    Button: Button.extend({
-      defaultProps: {
-        radius: 'full',
-      },
-    }),
+    Button: Button.extend({ defaultProps: { radius: 'full' } }),
+    Container: Container.extend({ classNames: { root: classes.containerRoot } }),
   },
   other: {
     lightGradient: 'linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%)',

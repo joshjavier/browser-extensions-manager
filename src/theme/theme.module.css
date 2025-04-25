@@ -1,0 +1,21 @@
+/* Focus ring for interactive components like Button and ActionIcon. Used in `theme.focusClassName`.
+   See https://mantine.dev/theming/theme-object/#focusclassname */
+.focus-auto {
+  &:focus-visible {
+    outline: 2px solid var(--mantine-color-red-4);
+    outline-offset: 2px;
+  }
+}
+
+/* Container */
+.containerRoot {
+  /* Wrapper variant */
+  &[data-variant='wrapper'] {
+    box-sizing: content-box;
+    max-width: rem(1170px);
+
+    @media (min-width: $mantine-breakpoint-sm) {
+      padding-inline: var(--mantine-spacing-400);
+    }
+  }
+}

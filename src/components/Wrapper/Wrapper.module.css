@@ -1,0 +1,10 @@
+.root {
+  &[data-variant='wrapper'] {
+    box-sizing: content-box;
+    max-width: rem(1170px);
+
+    @media (min-width: $mantine-breakpoint-sm) {
+      padding-inline: var(--mantine-spacing-400);
+    }
+  }
+}

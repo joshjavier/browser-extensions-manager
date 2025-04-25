@@ -1,10 +1,8 @@
 .container {
-  box-sizing: content-box;
   padding-top: var(--mantine-spacing-250);
   padding-bottom: var(--mantine-spacing-500);
 
   @media (min-width: $mantine-breakpoint-sm) {
-    padding-inline: var(--mantine-spacing-400);
     padding-top: var(--mantine-spacing-300);
   }
 

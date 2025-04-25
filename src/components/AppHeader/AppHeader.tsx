@@ -5,7 +5,7 @@ import classes from './AppHeader.module.css';
 
 export function AppHeader() {
   return (
-    <Container className={classes.container} size={1170} component="header">
+    <Container className={classes.container} variant="wrapper" component="header">
       <Paper className={classes.box} withBorder>
         <LogoContainer />
         <SettingsContainer />

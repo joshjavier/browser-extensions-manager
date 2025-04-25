@@ -1,4 +1,5 @@
-import { Button, createTheme, CSSVariablesResolver, rem } from '@mantine/core';
+import { Button, Container, createTheme, CSSVariablesResolver, rem } from '@mantine/core';
+import wrapper from './components/Wrapper/Wrapper.module.css';
 
 export const theme = createTheme({
   /** Put your mantine theme override here */
@@ -76,6 +77,7 @@ export const theme = createTheme({
         radius: 'full',
       },
     }),
+    Container: Container.extend({ classNames: wrapper }),
   },
   other: {
     lightGradient: 'linear-gradient(180deg, #EBF2FC 0%, #EEFBF9 100%)',

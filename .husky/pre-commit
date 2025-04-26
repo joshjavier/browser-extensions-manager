@@ -1,1 +1,1 @@
-yarn run lint && yarn run prettier:write
+npx lint-staged

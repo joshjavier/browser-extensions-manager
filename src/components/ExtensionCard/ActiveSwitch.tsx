@@ -1,20 +1,16 @@
-import { useState } from 'react';
 import { Switch } from '@mantine/core';
+import { Extension, toggleActive } from '@/pages/Home/Home.state';
 import classes from './ActiveSwitch.module.css';
 
-interface ActiveSwitchProps {
-  active: boolean;
-}
+type ActiveSwitchProps = Pick<Extension, 'id' | 'isActive'>;
 
-export function ActiveSwitch({ active }: ActiveSwitchProps) {
-  const [checked, setChecked] = useState(active);
-
+export function ActiveSwitch({ id, isActive }: ActiveSwitchProps) {
   return (
     <Switch
       classNames={classes}
       aria-label="Toggle active state"
-      checked={checked}
-      onChange={() => setChecked(!checked)}
+      checked={isActive}
+      onChange={() => toggleActive(id)}
     />
   );
 }

@@ -1,15 +1,15 @@
 import { useState } from 'react';
-import { Container, Flex, Tabs, Title } from '@mantine/core';
+import { Flex, Tabs, Title } from '@mantine/core';
+import { ExtensionCard } from '@/components/ExtensionCard';
+import { FilterContainer } from '@/components/Filter';
 import sampleExtensions from '@/data.json';
-import { ExtensionCard } from '../ExtensionCard';
-import { FilterContainer } from '../Filter';
-import classes from './MainContainer.module.css';
+import classes from './Home.module.css';
 
-export function MainContainer() {
+export function HomePage() {
   const [activeTab, setActiveTab] = useState<string | null>('all');
 
   return (
-    <Container variant="wrapper">
+    <>
       <Tabs
         value={activeTab}
         onChange={setActiveTab}
@@ -46,6 +46,6 @@ export function MainContainer() {
             ))}
         </Tabs.Panel>
       </Tabs>
-    </Container>
+    </>
   );
 }

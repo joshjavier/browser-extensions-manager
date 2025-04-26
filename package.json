@@ -20,6 +20,14 @@
     "storybook:build": "storybook build",
     "prepare": "husky"
   },
+  "lint-staged": {
+    "!(*.css|*.ts|*.tsx)": "eslint --cache",
+    "*.css": "stylelint --cache",
+    "*.{ts,tsx}": [
+      "eslint --cache",
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "@mantine/core": "7.17.4",
     "@mantine/hooks": "7.17.4",
@@ -48,6 +56,7 @@
     "husky": "^9.1.7",
     "identity-obj-proxy": "^3.0.0",
     "jsdom": "^26.0.0",
+    "lint-staged": "^15.5.1",
     "postcss": "^8.5.3",
     "postcss-preset-mantine": "1.17.0",
     "postcss-simple-vars": "^7.0.1",

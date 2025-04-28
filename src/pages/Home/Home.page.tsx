@@ -1,22 +1,17 @@
-import { useEffect } from 'react';
 import { useSnapshot } from 'valtio';
 import { Flex, Tabs, Title } from '@mantine/core';
-import { ExtensionCard } from '@/components/ExtensionCard';
+import { ExtensionsContainer } from '@/components/ExtensionsContainer';
 import { FilterContainer } from '@/components/Filter';
-import sampleExtensions from '@/data.json';
 import { Filter, state } from './Home.state';
 import classes from './Home.module.css';
 
 export function HomePage() {
-  const snap = useSnapshot(state);
-  useEffect(() => {
-    state.extensions = sampleExtensions;
-  }, []);
+  const { filter } = useSnapshot(state);
 
   return (
     <>
       <Tabs
-        value={snap.filter}
+        value={filter}
         onChange={(value) => (state.filter = (value as Filter) ?? 'all')}
         variant="pills"
         classNames={{
@@ -31,25 +26,7 @@ export function HomePage() {
           <FilterContainer />
         </Flex>
 
-        <Tabs.Panel value="all">
-          {snap.extensions.map((e) => (
-            <ExtensionCard key={e.id} {...e} />
-          ))}
-        </Tabs.Panel>
-        <Tabs.Panel value="active">
-          {snap.extensions
-            .filter((e) => e.isActive)
-            .map((e) => (
-              <ExtensionCard key={e.id} {...e} />
-            ))}
-        </Tabs.Panel>
-        <Tabs.Panel value="inactive">
-          {snap.extensions
-            .filter((e) => !e.isActive)
-            .map((e) => (
-              <ExtensionCard key={e.id} {...e} />
-            ))}
-        </Tabs.Panel>
+        <ExtensionsContainer />
       </Tabs>
     </>
   );

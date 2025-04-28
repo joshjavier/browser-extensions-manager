@@ -40,7 +40,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/browser-extension-manager-ui-using-mantine-and-valtio-8dJ_IyLxWE
 - Live Site URL: https://browser-extensions-manager.pages.dev
 
 ## My process

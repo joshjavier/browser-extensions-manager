@@ -4352,6 +4352,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-plugin-valtio@npm:^0.8.0":
+  version: 0.8.0
+  resolution: "eslint-plugin-valtio@npm:0.8.0"
+  checksum: 10c0/9e1ab4582112a9e3f82e1425136377632fc6b29fc30b67b667b2ac10728ec2607c2017a00b62398bc1bfa3726ae36b794cf7772eb71654b53a2643053ecc11c2
+  languageName: node
+  linkType: hard
+
 "eslint-scope@npm:^8.3.0":
   version: 8.3.0
   resolution: "eslint-scope@npm:8.3.0"
@@ -6383,6 +6390,7 @@ __metadata:
     eslint-config-mantine: "npm:^4.0.3"
     eslint-plugin-jsx-a11y: "npm:^6.10.2"
     eslint-plugin-react: "npm:^7.37.4"
+    eslint-plugin-valtio: "npm:^0.8.0"
     husky: "npm:^9.1.7"
     identity-obj-proxy: "npm:^3.0.0"
     jsdom: "npm:^26.0.0"
